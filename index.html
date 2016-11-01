@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contacts">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Angular -->
+    <script src="bower_components/angular/angular.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="bower_components/firebase/firebase.js"></script>
+
+    <!-- AngularFire -->
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCWN7fyQfdBduDZx8rpER13t319_NOCUCg",
+            authDomain: "contacts-c604b.firebaseapp.com",
+            databaseURL: "https://contacts-c604b.firebaseio.com",
+            storageBucket: "contacts-c604b.appspot.com",
+            messagingSenderId: "404660621338"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body class="container">
+
+<div ng-controller="contactCtrl" style="padding: 20px;">
+
+    <div class="row">
+        <div class="col-md-3"><input type="text" ng-model="contact.name" placeholder="Name" class="form-control"></div>
+        <div class="col-md-3"><input type="text" ng-model="contact.email" placeholder="email" class="form-control"></div>
+        <div class="col-md-3"><input type="text" ng-model="contact.phnumber" placeholder="phone number" class="form-control"></div>
+        <div class="col-md-3"><input type="button" ng-click="add(contact)" value="add contact"></div>
+    </div>
+<div class="row">
+    <div ng-repeat="contact in contacts">
+        <div class="col-md-3" ng-bind="contact.name"></div>
+        <div class="col-md-3" ng-bind="contact.email"></div>
+        <div class="col-md-3" ng-bind="contact.phnumber"></div>
+        <div class="col-md-3"><input type="button" ng-click="contacts.$remove(contact)" value="remove"></div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+</body>
+</html>
