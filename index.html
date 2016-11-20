@@ -37,14 +37,14 @@
         <div class="col-md-3"><input type="text" ng-model="contact.name" placeholder="Name" class="form-control"></div>
         <div class="col-md-3"><input type="text" ng-model="contact.email" placeholder="email" class="form-control"></div>
         <div class="col-md-3"><input type="text" ng-model="contact.phnumber" placeholder="phone number" class="form-control"></div>
-        <div class="col-md-3"><input type="button" ng-click="add(contact)" value="add contact"></div>
+        <div class="col-md-3"><input type="button" ng-click="add(contact)" value="add contact" class="btn btn-success"></div>
     </div>
 <div class="row">
     <div ng-repeat="contact in contacts">
         <div class="col-md-3" ng-bind="contact.name"></div>
         <div class="col-md-3" ng-bind="contact.email"></div>
         <div class="col-md-3" ng-bind="contact.phnumber"></div>
-        <div class="col-md-3"><input type="button" ng-click="contacts.$remove(contact)" value="remove"></div>
+        <div class="col-md-3"><input type="button" ng-click="contacts.$remove(contact)" value="remove" class="btn btn-success"></div>
 
     </div>
 
