@@ -1,0 +1,22 @@
+{
+  "name": "step-01",
+  "homepage": "https://github.com/abhishekori/angular-firebase-tutorial",
+  "authors": [
+    "abhishek <abhikori1994@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "firebase": "^3.5.2",
+    "angularfire": "^2.1.0",
+    "bootstrap": "^3.3.7"
+  }
+}
